@@ -1,15 +1,10 @@
-import express from "express";
+import * as express from "express";
 const app = express();
 import connectDB from "./Logger/db";
 
 // Connect Database
 connectDB();
 
-// Define Routes
-app.use(express.json());
-app.use("/api/users", require("./api/users"));
-app.use("/api/profile", require("./api/profile"));
-app.use("/api/auth", require("./api/auth"));
 // error handler
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
