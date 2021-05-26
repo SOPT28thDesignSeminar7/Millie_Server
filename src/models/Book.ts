@@ -1,4 +1,4 @@
-import * as mongoose from "mongoose";
+import mongoose from "mongoose";
 import {IBook} from "../interfaces/IBook";
 
 const BookSchema=new mongoose.Schema({  
@@ -17,8 +17,10 @@ const BookSchema=new mongoose.Schema({
         highlightText:
             {type:String,}, //recent
         highlightDate:{
-                type:String},    
+                type:Date,
+                default:Date.now, 
             }
+        }
         ],
     image:{
         type:String,

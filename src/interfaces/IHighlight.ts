@@ -1,6 +1,6 @@
-import * as mongoose from 'mongoose';
+import mongoose from 'mongoose';
 
 export interface IHighlight{
     text:string;
-    date:string;
+    date:Date;
 }
