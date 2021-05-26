@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import {IBook} from "../interfaces/IBook";
+import { HighlightSchema } from "./Highlight";
 
 const BookSchema=new mongoose.Schema({  
     title:{
@@ -12,16 +13,7 @@ const BookSchema=new mongoose.Schema({
     highlightCount:{
         type:Number,
     },
-    highlights: [
-        {
-        highlightText:
-            {type:String,}, //recent
-        highlightDate:{
-                type:Date,
-                default:Date.now, 
-            }
-        }
-        ],
+    highlights: [HighlightSchema],
     image:{
         type:String,
     }

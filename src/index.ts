@@ -1,9 +1,13 @@
-import * as express from "express";
+import express from "express";
 const app = express();
 import connectDB from "./Logger/db";
 
 // Connect Database
 connectDB();
+
+app.use(express.json());
+
+app.use("/api/books", require("./api/books"));
 
 // error handler
 app.use(function (err, req, res, next) {
