@@ -8,7 +8,7 @@ connectDB();
 app.use(express.json());
 
 app.use("/api/books", require("./api/books"));
-
+app.use("/api/highlights", require("./api/highlights"));
 // error handler
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
