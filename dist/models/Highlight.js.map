@@ -1,0 +1,1 @@
+{"version":3,"file":"Highlight.js","sourceRoot":"","sources":["../../src/models/Highlight.ts"],"names":[],"mappings":";;;;;;AAAA,wDAAgC;AAEhC,8DAA2D;AAE9C,QAAA,eAAe,GAAG,IAAI,kBAAQ,CAAC,MAAM,CAAC;IACjD,aAAa,EAAE;QACb,IAAI,EAAE,MAAM;KACb;IACD,aAAa,EAAE;QACb,IAAI,EAAE,MAAM;QACZ,OAAO,EAAE,6BAAa,EAAE;KACzB;CACF,EAAE,EAAE,GAAG,EAAE,KAAK,EAAE,CAAC,CAAC"}
