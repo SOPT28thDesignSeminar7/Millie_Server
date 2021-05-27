@@ -20,9 +20,8 @@ router.get("/:id", async (req: Request, res: Response) => {
     const book = await Book.findOne({_id:req.params.id},{"__v":0}).populate("books");
     res.json({ 
       "status": 200,
-      "data": book
-      
-     });
+      "data": {books:book
+     }});
   } catch (error) {
     console.error(error.message);
     res.status(404).send("해당되는 책이 없습니다.");
