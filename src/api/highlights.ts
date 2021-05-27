@@ -17,12 +17,11 @@ router.get("/",async(req: Request, res: Response)=>{
 router.get("/:id", async (req: Request, res: Response) => {
   try {
       //필터링을 통해 해당 아이디의 책만 가져옴
-    const book = await Book.findOne({_id:req.params.id}).populate("books");
+    const book = await Book.findOne({_id:req.params.id},{"__v":0}).populate("books");
     res.json({ 
       "status": 200,
-      "data": {
-      "books": book
-      }
+      "data": book
+      
      });
   } catch (error) {
     console.error(error.message);
